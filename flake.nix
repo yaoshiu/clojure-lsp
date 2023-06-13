@@ -10,7 +10,7 @@
     };
     # workaround for bb support in buildCommand
     cljtools = {type = "file";
-                url = "https://download.clojure.org/install/clojure-tools-1.11.1.1257.zip";
+                url = "https://download.clojure.org/install/clojure-tools-1.11.1.1273.zip";
                 flake = false;
                };
   };
@@ -34,8 +34,8 @@
             jdkRunner = pkgs.jdk17_headless;
             buildCommand =
               ''
-                mkdir -p /build/.deps.clj/1.11.1.1257
-                unzip ${cljtools} -d /build/.deps.clj/1.11.1.1257
+                mkdir -p /build/.deps.clj/1.11.1.1273
+                unzip ${cljtools} -d /build/.deps.clj/1.11.1.1273
 
                 mkdir -p target
                 bb cli-prod-jar
